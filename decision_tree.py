@@ -56,7 +56,7 @@ if __name__ == "__main__":
     y = label_encoder.fit_transform(y)
     
     #------------------Treinamento + teste e avaliação (usando Stratified k-fold cross validation)
-    min_samples_split=100
+    
     accs,f1s = np.array([]),np.array([])
     
     for i, (train_idx, test_idx) in enumerate(skf.split(X,y)):
