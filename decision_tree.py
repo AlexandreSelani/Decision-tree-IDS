@@ -28,7 +28,7 @@ def saveTreeImage(decision_tree):
     tree.plot_tree(decision_tree, max_depth=3, filled=True, fontsize=10)
     plt.savefig("arvore_exemplo.png", dpi=300, bbox_inches="tight")
 
-def featureImportances(decision_tree):
+def featureImportances(decision_tree,X_train):
 
     feature_importances = decision_tree.feature_importances_
     
@@ -83,7 +83,7 @@ if __name__ == "__main__":
 
     
         #----------------Importancia das features
-        #featureImportances(decision_tree)
+        #featureImportances(decision_tree,X_train)
 
     print(f"Resultados finais:\nAccuracy = {accs.mean():.3f}\nF1 score = {f1s.mean():.3f}")
 
